@@ -1,6 +1,6 @@
-const Rand = require('../dist/rand-seed');
+const {Rand, PRNG} = require('../dist/rand-seed');
 
-let rand = new Rand('1234');
+let rand = new Rand('1234', PRNG.mulberry32);
 const result1 = Array.from({length: 10}, () => rand.next());
 
 rand = new Rand('1234');
