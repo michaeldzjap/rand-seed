@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "target": "es5",
+        "module": "es6",
+        "lib": ["es5", "es6", "es7", "dom"],
+        "strict": true,
+        "sourceMap": true,
+        "declaration": true,
+        "declarationDir": "./dist",
+        "outDir": "./dist"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "example"
+    ]
+}

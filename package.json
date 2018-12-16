@@ -1,0 +1,62 @@
+{
+  "name": "rand",
+  "version": "0.0.1",
+  "description": "A small library for generating random numbers",
+  "main": "dist/rand.js",
+  "module": "dist/rand.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./",
+    "test": "NODE_ENV=test ./node_modules/.bin/jest",
+    "build": "./node_modules/.bin/rollup --config",
+    "watch": "./node_modules/.bin/rollup --config --watch"
+  },
+  "keywords": [
+    "random",
+    "seed",
+    "prng"
+  ],
+  "author": "Michael Dzjaparidze",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "eslint": "^5.10.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-typescript": "^0.14.0",
+    "jest": "^23.6.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.18.1",
+    "rollup-plugin-uglify": "^6.0.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2",
+    "typescript-eslint-parser": "^21.0.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.+(ts|tsx|js)"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.test.json"
+      }
+    }
+  }
+}
