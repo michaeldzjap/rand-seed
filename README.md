@@ -34,3 +34,6 @@ If no seed is specified the call to `rand.next()` will simply be forwarded to `M
 // Create a new random number generator using the xoshiro128** algorithm
 const rand = new Rand('1234', PRNG.xoshiro128ss);
 ```
+
+## Example
+A simple example is included. This may be run with _node_: `node example/index.js`
