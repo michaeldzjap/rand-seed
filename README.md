@@ -27,7 +27,7 @@ Either import directly
 or import in your own scripts using
 
 ```javascript
-import {Rand, PRNG} from 'rand-seed';
+import Rand, {PRNG} from 'rand-seed';
 ```
 
 Then simply create a new instance with an (optional) seed:
