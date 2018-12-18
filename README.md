@@ -1,9 +1,9 @@
 ![NPM Version](https://img.shields.io/npm/v/rand-seed.svg?branch=master)
 ![downloads](https://img.shields.io/npm/dt/rand-seed.svg)
-[![Build Status](https://travis-ci.org/michaeldzjap/waveplayer.js.svg?branch=master)](https://travis-ci.org/michaeldzjap/waveplayer.js)
-![dependencies](https://img.shields.io/david/michaeldzjap/waveplayer.js.svg)
-![dev dependencies](https://img.shields.io/david/dev/michaeldzjap/waveplayer.js.svg)
-[![License](https://img.shields.io/npm/l/react-signature-pad-wrapper.svg)](https://github.com/michaeldzjap/waveplayer.js/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/michaeldzjap/rand-seed.svg?branch=master)](https://travis-ci.org/michaeldzjap/waveplayer.js)
+![dependencies](https://img.shields.io/david/michaeldzjap/rand-seed.svg)
+![dev dependencies](https://img.shields.io/david/dev/michaeldzjap/rand-seed.svg)
+[![License](https://img.shields.io/npm/l/rand-seed.svg)](https://github.com/michaeldzjap/rand-seed/blob/master/LICENSE)
 
 # rand-seed
 A small seedable random number generator library written in TypeScript
