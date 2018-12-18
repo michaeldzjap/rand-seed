@@ -1,6 +1,6 @@
 {
   "name": "rand-seed",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A small library for generating random numbers",
   "main": "dist/rand-seed.js",
   "module": "dist/rand-seed.es.js",
