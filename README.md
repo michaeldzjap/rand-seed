@@ -8,7 +8,7 @@
 # rand-seed
 A small seedable random number generator library written in TypeScript
 
-The default `Math.random()` function doesn't allow for setting a seed. This library offers a number of different semi-random number generators which may be initialised with an arbitrary seed in string format, hence, making it possible to produce sequences of semi-random numbers that are always the same for a given seed. The implemented algorithms are detailed [here](https://stackoverflow.com/a/47593316/7024747).
+The default `Math.random()` function doesn't allow for setting a seed. This library offers a number of different semi-random number generators which may be initialised with an arbitrary seed in string format, hence, making it possible to produce sequences of semi-random numbers that are always the same for a given seed. The implemented algorithms are detailed [here](https://stackoverflow.com/a/47593316/7024747) (note that I am not the author of that post, I merely used it for the implementation of this library).
 
 ## Installation
 This package is available through _npm_:
