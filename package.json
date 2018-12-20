@@ -24,7 +24,7 @@
     "prng"
   ],
   "author": "Michael Dzjaparidze",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/michaeldzjap/rand-seed/issues"
   },
