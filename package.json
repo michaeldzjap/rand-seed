@@ -31,11 +31,11 @@
   "homepage": "https://github.com/michaeldzjap/rand-seed#readme",
   "devDependencies": {
     "@types/jest": "^23.3.10",
-    "eslint": "^5.10.0",
+    "eslint": "^5.11.1",
     "eslint-plugin-jest": "^22.1.2",
     "eslint-plugin-typescript": "^0.14.0",
     "jest": "^23.6.0",
-    "rollup": "^0.68.0",
+    "rollup": "^1.0.0",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-eslint": "^5.0.0",
     "rollup-plugin-node-resolve": "^4.0.0",
