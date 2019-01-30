@@ -1,11 +1,11 @@
-![NPM Version](https://img.shields.io/npm/v/rand-seed.svg?branch=master)
-![downloads](https://img.shields.io/npm/dt/rand-seed.svg)
-[![Build Status](https://travis-ci.org/michaeldzjap/rand-seed.svg?branch=master)](https://travis-ci.org/michaeldzjap/rand-seed)
-![dependencies](https://img.shields.io/david/michaeldzjap/rand-seed.svg)
-![dev dependencies](https://img.shields.io/david/dev/michaeldzjap/rand-seed.svg)
-[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
-[![codecov](https://codecov.io/gh/michaeldzjap/rand-seed/branch/master/graph/badge.svg)](https://codecov.io/gh/michaeldzjap/rand-seed)
-[![License](https://img.shields.io/npm/l/rand-seed.svg)](https://github.com/michaeldzjap/rand-seed/blob/master/LICENSE)
+![NPM Version](https://img.shields.io/npm/v/rand-seed.svg?branch=master&style=flat-square)
+![downloads](https://img.shields.io/npm/dt/rand-seed.svg?style=flat-square)
+[![Build Status](https://travis-ci.org/michaeldzjap/rand-seed.svg?branch=master&style=flat-square)](https://travis-ci.org/michaeldzjap/rand-seed)
+![dependencies](https://img.shields.io/david/michaeldzjap/rand-seed.svg?style=flat-square)
+![dev dependencies](https://img.shields.io/david/dev/michaeldzjap/rand-seed.svg?style=flat-square)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg?style=flat-square)](https://github.com/facebook/jest)
+[![codecov](https://codecov.io/gh/michaeldzjap/rand-seed/branch/master/graph/badge.svg?style=flat-square)](https://codecov.io/gh/michaeldzjap/rand-seed)
+[![License](https://img.shields.io/npm/l/rand-seed.svg?style=flat-square)](https://github.com/michaeldzjap/rand-seed/blob/master/LICENSE)
 
 
 # rand-seed
