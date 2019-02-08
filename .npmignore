@@ -1,6 +1,7 @@
 __tests__
-src
+coverage
 example
+src
 .eslintignore
 .eslintrc.json
 .gitignore
