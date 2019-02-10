@@ -1,4 +1,4 @@
-import IAlgorithm from './IAlgorithm';
+import AlgorithmContract from './Algorithm';
 import Mulberry32 from './Algorithms/Mulberry32';
 import Sfc32 from './Algorithms/Sfc32';
 import Xoshiro128ss from './Algorithms/Xoshiro128ss';
@@ -43,7 +43,7 @@ class Rand {
      *
      * @var {Function}
      */
-    private _generator: IAlgorithm;
+    private _generator: AlgorithmContract;
 
     /**
      * Create a new rand instance.
@@ -69,9 +69,9 @@ class Rand {
     /**
      * Initialize the chosen random number generator.
      *
-     * @returns {IAlgorithm|Function}
+     * @returns {Algorithm|Function}
      */
-    private _initializeGenerator(): IAlgorithm {
+    private _initializeGenerator(): AlgorithmContract {
         if (isNullOrUndefined(this._str)) return this._wrap();
 
         switch (this._prng) {
@@ -89,9 +89,9 @@ class Rand {
     /**
      * Wrap the standard random function in an object.
      *
-     * @returns {IAlgorithm}
+     * @returns {Algorithm}
      */
-    private _wrap(): IAlgorithm {
+    private _wrap(): AlgorithmContract {
         return {
             next(): number {
                 return Math.random();

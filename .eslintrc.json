@@ -1,22 +1,24 @@
 {
     "root": true,
     "env": {
-        "shared-node-browser": true,
+        "browser": true,
+        "node": true,
         "commonjs": true,
         "es6": true,
         "jest/globals": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:jest/recommended"
+        "plugin:jest/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
-    "parser": "typescript-eslint-parser",
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module"
     },
     "plugins": [
-        "typescript",
+        "@typescript-eslint",
         "jest"
     ],
     "rules": {
@@ -222,7 +224,7 @@
         "no-template-curly-in-string": "error",
         "no-throw-literal": "error",
         "no-trailing-spaces": "warn",
-        "no-undef": "off", // https://github.com/eslint/typescript-eslint-parser/issues/416
+        "no-undef": "off",
         "no-undef-init": "error",
         "no-undefined": "error",
         "no-unmodified-loop-condition": "error",
@@ -366,45 +368,6 @@
             "error",
             "any"
         ],
-        "yield-star-spacing": "error",
-
-        "typescript/adjacent-overload-signatures": "error",
-        "typescript/class-name-casing": "error",
-        "typescript/explicit-function-return-type": "error",
-        "typescript/explicit-member-accessibility": "error",
-        "typescript/interface-name-prefix": ["warn", "always"],
-        "typescript/member-delimiter-style": [
-            "error",
-            {
-                "delimiter": "semi",
-                "requireLast": true,
-                "ignoreSingleLine": true
-            }
-        ],
-        "typescript/member-naming": [
-            "error",
-            {"private": "^_"}
-        ],
-        "typescript/member-ordering": "error",
-        "typescript/no-angle-bracket-type-assertion": "error",
-        "typescript/no-array-constructor": "error",
-        "typescript/no-empty-interface": "error",
-        "typescript/no-explicit-any": "warn",
-        "typescript/no-inferrable-types": [
-            "warn",
-            {"ignoreProperties": true, "ignoreParameters": true}
-        ],
-        "typescript/no-namespace": "error",
-        "typescript/no-non-null-assertion": "warn",
-        "typescript/no-parameter-properties": "error",
-        "typescript/no-triple-slash-reference": "error",
-        "typescript/no-type-alias": [
-            "error",
-            {"allowAliases": "in-unions-and-intersections", "allowLiterals": true}
-        ],
-        "typescript/no-unused-vars": "error",
-        "typescript/no-use-before-define": "error",
-        "typescript/no-var-requires": "error",
-        "typescript/type-annotation-spacing": "error"
+        "yield-star-spacing": "error"
     }
 }

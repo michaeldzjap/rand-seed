@@ -1,7 +1,7 @@
 import Base from './Base';
-import IAlgorithm from '../IAlgorithm';
+import AlgorithmContract from '../Algorithm';
 
-class Xoshiro128ss extends Base implements IAlgorithm {
+class Xoshiro128ss extends Base implements AlgorithmContract {
 
     /**
      * Seed parameters.

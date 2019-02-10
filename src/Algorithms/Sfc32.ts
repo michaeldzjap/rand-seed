@@ -1,7 +1,7 @@
 import Base from './Base';
-import IAlgorithm from '../IAlgorithm';
+import AlgorithmContract from '../Algorithm';
 
-class Sfc32 extends Base implements IAlgorithm {
+class Sfc32 extends Base implements AlgorithmContract {
 
     /**
      * Seed parameters.

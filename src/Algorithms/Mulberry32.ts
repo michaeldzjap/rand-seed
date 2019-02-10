@@ -1,7 +1,7 @@
 import Base from './Base';
-import IAlgorithm from '../IAlgorithm';
+import AlgorithmContract from '../Algorithm';
 
-class Mulberry32 extends Base implements IAlgorithm {
+class Mulberry32 extends Base implements AlgorithmContract {
 
     /**
      * Seed parameter.

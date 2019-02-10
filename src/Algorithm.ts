@@ -1,4 +1,4 @@
-interface IAlgorithm {
+interface Algorithm {
 
     /**
      * Generate a new random number.
@@ -9,4 +9,4 @@ interface IAlgorithm {
 
 }
 
-export default IAlgorithm;
+export default Algorithm;
