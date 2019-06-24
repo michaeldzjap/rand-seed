@@ -1,5 +1,6 @@
 /node_modules
 /.idea
+/.scannerwork
 /coverage
 /dist
 npm-debug.log
