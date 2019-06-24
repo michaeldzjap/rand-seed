@@ -5,6 +5,7 @@
 ![dev dependencies](https://img.shields.io/david/dev/michaeldzjap/rand-seed.svg)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![codecov](https://codecov.io/gh/michaeldzjap/rand-seed/branch/master/graph/badge.svg)](https://codecov.io/gh/michaeldzjap/rand-seed)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=michaeldzjap_rand-seed&metric=alert_status)](https://sonarcloud.io/dashboard?id=michaeldzjap_rand-seed)
 [![License](https://img.shields.io/npm/l/rand-seed.svg)](https://github.com/michaeldzjap/rand-seed/blob/master/LICENSE)
 
 
