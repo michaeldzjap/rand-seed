@@ -19,7 +19,9 @@ const base = {
     plugins: [
         eslint(),
         typescript({
-            typescript: require('typescript')
+            typescript: require('typescript'),
+            clean: true,
+            objectHashIgnoreUnknownHack: true,
         }),
         commonjs(),
         resolve(),
