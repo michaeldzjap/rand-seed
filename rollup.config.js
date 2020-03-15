@@ -21,7 +21,6 @@ const base = {
         typescript({
             typescript: require('typescript'),
             clean: true,
-            objectHashIgnoreUnknownHack: true,
         }),
         commonjs(),
         resolve(),
