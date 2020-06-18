@@ -7,7 +7,7 @@ abstract class Base {
      * @param {string} str
      * @returns {Function}
      */
-    protected static _xfnv1a(str: string): Function {
+    protected static _xfnv1a(str: string): () => number {
         let h = 2166136261 >>> 0;
 
         for (let i = 0; i < str.length; i++) {
