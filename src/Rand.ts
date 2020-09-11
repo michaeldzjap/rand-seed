@@ -2,7 +2,7 @@ import AlgorithmContract from './Algorithm';
 import Mulberry32 from './Algorithms/Mulberry32';
 import Sfc32 from './Algorithms/Sfc32';
 import Xoshiro128ss from './Algorithms/Xoshiro128ss';
-import {isNullOrUndefined} from './helpers';
+import { isNullOrUndefined } from './helpers';
 
 /**
  * Available seedable random number generator algorithms.
@@ -12,7 +12,7 @@ import {isNullOrUndefined} from './helpers';
 export enum PRNG {
     sfc32 = 'sfc32',
     mulberry32 = 'mulberry32',
-    xoshiro128ss = 'xoshiro128ss'
+    xoshiro128ss = 'xoshiro128ss',
 }
 
 /**
@@ -20,30 +20,31 @@ export enum PRNG {
  * number generator algorithms are configurable.
  *
  * See https://stackoverflow.com/a/47593316/7024747 for more info.
+ * @class
+ * @classdesc A class for generating random numbers.
  */
 class Rand {
-
     /**
      * The string that will be used for generating a suitable hash for any of
      * the provided PRNG algorithms.
      *
      * @var {string}
      */
-    private _str?: string;
+    private str?: string;
 
     /**
      * The PRNG algorithm that should be used for random number generation.
      *
      * @var {PRNG}
      */
-    private _prng: PRNG;
+    private prng: PRNG;
 
     /**
      * The generator that should be used for generating random numbers.
      *
      * @var {Function}
      */
-    private _generator: AlgorithmContract;
+    private generator: AlgorithmContract;
 
     /**
      * Create a new rand instance.
@@ -52,9 +53,9 @@ class Rand {
      * @param {PRNG} prng
      */
     public constructor(str?: string, prng: PRNG = PRNG.sfc32) {
-        this._str = str;
-        this._prng = prng;
-        this._generator = this._initializeGenerator();
+        this.str = str;
+        this.prng = prng;
+        this.generator = this._initializeGenerator();
     }
 
     /**
@@ -63,7 +64,7 @@ class Rand {
      * @returns {number}
      */
     public next(): number {
-        return this._generator.next();
+        return this.generator.next();
     }
 
     /**
@@ -72,17 +73,17 @@ class Rand {
      * @returns {Algorithm|Function}
      */
     private _initializeGenerator(): AlgorithmContract {
-        if (isNullOrUndefined(this._str)) return this._wrap();
+        if (isNullOrUndefined(this.str)) return this.wrap();
 
-        switch (this._prng) {
+        switch (this.prng) {
             case 'sfc32':
-                return new Sfc32(this._str);
+                return new Sfc32(this.str);
             case 'mulberry32':
-                return new Mulberry32(this._str);
+                return new Mulberry32(this.str);
             case 'xoshiro128ss':
-                return new Xoshiro128ss(this._str);
+                return new Xoshiro128ss(this.str);
             default:
-                return this._wrap();
+                return this.wrap();
         }
     }
 
@@ -91,14 +92,18 @@ class Rand {
      *
      * @returns {Algorithm}
      */
-    private _wrap(): AlgorithmContract {
+    private wrap(): AlgorithmContract {
         return {
+            /**
+             * Generate a random number.
+             *
+             * @return {number}
+             */
             next(): number {
                 return Math.random();
-            }
+            },
         };
     }
-
 }
 
 export default Rand;

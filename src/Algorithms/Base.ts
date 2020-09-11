@@ -1,5 +1,8 @@
+/**
+ * @class
+ * @classdesc Base class all algorithm implementations should inherit from.
+ */
 abstract class Base {
-
     /**
      * Generate a hash from a string that is suitable to use as a seed for any
      * of the PRNG's that inherit from this.
@@ -15,13 +18,14 @@ abstract class Base {
         }
 
         return (): number => {
-            h += h << 13; h ^= h >>> 7;
-            h += h << 3; h ^= h >>> 17;
+            h += h << 13;
+            h ^= h >>> 7;
+            h += h << 3;
+            h ^= h >>> 17;
 
             return (h += h << 5) >>> 0;
         };
     }
-
 }
 
 export default Base;

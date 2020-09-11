@@ -1,6 +1,6 @@
 {
-    "extends": "./tsconfig.base",
-    "include": [
-        "__tests__/**/*"
-    ]
+  "extends": "./tsconfig.base",
+  "include": [
+    "__tests__/**/*"
+  ]
 }

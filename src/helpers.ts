@@ -4,9 +4,7 @@
  * @param {mixed} value
  * @returns {boolean}
  */
-export const isUndefined = (value: unknown): value is undefined => (
-    typeof value === 'undefined'
-);
+export const isUndefined = (value: unknown): value is undefined => typeof value === 'undefined';
 
 /**
  * Determine if the given value is null.
@@ -22,6 +20,6 @@ export const isNull = (value: unknown): value is null => value === null;
  * @param {mixed} value
  * @returns {boolean}
  */
-export const isNullOrUndefined = (value: unknown): value is null | undefined => (
-    isNull(value) || isUndefined(value)
-);
+export const isNullOrUndefined = (value: unknown): value is null | undefined => {
+    return isNull(value) || isUndefined(value);
+};

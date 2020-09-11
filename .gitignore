@@ -3,6 +3,7 @@
 /.scannerwork
 /coverage
 /dist
-npm-debug.log
-.DS_Store
 .rpt2_cache
+.DS_Store
+.eslintcache
+npm-debug.log

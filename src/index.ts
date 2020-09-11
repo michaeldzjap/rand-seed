@@ -1,4 +1,4 @@
-import Rand, {PRNG} from './Rand';
+import Rand, { PRNG } from './Rand';
 
 export default Rand;
-export {PRNG};
+export { PRNG };
