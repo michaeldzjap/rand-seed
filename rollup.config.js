@@ -1,5 +1,5 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
+import {nodeResolve} from '@rollup/plugin-node-resolve';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
 import {eslint} from 'rollup-plugin-eslint';
@@ -23,7 +23,7 @@ const base = {
             clean: true,
         }),
         commonjs(),
-        resolve(),
+        nodeResolve(),
         sourceMaps(),
     ]
 };
