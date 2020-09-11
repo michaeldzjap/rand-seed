@@ -1,8 +1,8 @@
-import Rand, {PRNG} from '../src/Rand';
+import Rand, { PRNG } from '../src/Rand';
 
 describe('Rand', (): void => {
     it('creates a new default instance', (): void => {
-        const rand = new Rand;
+        const rand = new Rand();
 
         expect(rand).toBeInstanceOf(Rand);
         expect(typeof rand.next()).toBe('number');
@@ -12,7 +12,7 @@ describe('Rand', (): void => {
         undefined, // eslint-disable-line no-undefined
         PRNG.sfc32,
         PRNG.mulberry32,
-        PRNG.xoshiro128ss
+        PRNG.xoshiro128ss,
     ].forEach((algo: PRNG | undefined): void => {
         it(`creates a new [${algo}] instance`, (): void => {
             const rand = new Rand('1234', algo);
@@ -22,17 +22,13 @@ describe('Rand', (): void => {
         });
     });
 
-    [
-        PRNG.sfc32,
-        PRNG.mulberry32,
-        PRNG.xoshiro128ss
-    ].forEach((algo: PRNG): void => {
+    [PRNG.sfc32, PRNG.mulberry32, PRNG.xoshiro128ss].forEach((algo: PRNG): void => {
         it(`reproduces the same random sequence for a given seed: [${algo}]`, (): void => {
             let rand = new Rand('1234', algo);
-            const result1 = Array.from({length: 10}, (): number => rand.next());
+            const result1 = Array.from({ length: 10 }, (): number => rand.next());
 
             rand = new Rand('1234', algo);
-            const result2 = Array.from({length: 10}, (): number => rand.next());
+            const result2 = Array.from({ length: 10 }, (): number => rand.next());
 
             expect(result1).toEqual(result2);
         });
