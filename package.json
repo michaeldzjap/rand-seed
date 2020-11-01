@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/michaeldzjap/rand-seed#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "@types/jest": "^26.0.13",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
@@ -49,12 +49,11 @@
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-sourcemaps": "^0.6.2",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.27.2",
+    "rollup-plugin-typescript2": "^0.29.0",
     "rollup-plugin-uglify": "^6.0.4",
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
   },
-  "dependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
