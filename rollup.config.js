@@ -29,7 +29,7 @@ export default [
     {
         ...base,
         ...{
-            output: { file: pkg.main, format: 'cjs', sourcemap: true },
+            output: { file: pkg.main, format: 'cjs', sourcemap: true, exports: 'named' },
             plugins: [...base.plugins, uglify()],
         },
     },
