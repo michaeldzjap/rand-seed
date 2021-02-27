@@ -12,7 +12,8 @@
     "lint": "./node_modules/.bin/eslint --ext .ts ./",
     "test": "NODE_ENV=test ./node_modules/.bin/jest",
     "build": "./node_modules/.bin/rollup --config",
-    "watch": "./node_modules/.bin/rollup --config --watch"
+    "watch": "./node_modules/.bin/rollup --config --watch",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -36,11 +37,11 @@
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
     "eslint": "^7.8.1",
-    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-jest": "^24.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.0",
+    "husky": "^5.1.1",
     "jest": "^26.4.2",
     "lint-staged": "^10.3.0",
     "prettier": "^2.1.1",
@@ -49,7 +50,7 @@
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-sourcemaps": "^0.6.2",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-uglify": "^6.0.4",
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
