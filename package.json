@@ -46,7 +46,6 @@
     "jest": "^27.0.1",
     "lint-staged": "^11.0.0",
     "prettier": "^2.1.1",
-    "prettier-standard": "^16.4.1",
     "rollup": "^2.26.11",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-sourcemaps": "^0.6.2",
