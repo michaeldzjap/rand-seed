@@ -13,7 +13,8 @@
     "test": "NODE_ENV=test ./node_modules/.bin/jest",
     "build": "./node_modules/.bin/rollup --config",
     "watch": "./node_modules/.bin/rollup --config --watch",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-jest": "^24.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^6.0.0",
+    "husky": "^7.0.1",
     "jest": "^27.0.1",
     "lint-staged": "^11.0.0",
     "prettier": "^2.1.1",
