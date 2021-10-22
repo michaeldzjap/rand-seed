@@ -1,6 +1,6 @@
 ![NPM Version](https://img.shields.io/npm/v/rand-seed.svg?branch=master)
 ![downloads](https://img.shields.io/npm/dt/rand-seed.svg)
-[![Build Status](https://travis-ci.org/michaeldzjap/rand-seed.svg?branch=master)](https://travis-ci.org/michaeldzjap/rand-seed)
+[![Build Status](https://app.travis-ci.com/michaeldzjap/rand-seed.svg?branch=develop)](https://app.travis-ci.com/michaeldzjap/rand-seed)
 ![dependencies](https://img.shields.io/david/michaeldzjap/rand-seed.svg)
 ![dev dependencies](https://img.shields.io/david/dev/michaeldzjap/rand-seed.svg)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)

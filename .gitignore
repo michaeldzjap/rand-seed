@@ -1,9 +1,7 @@
 /node_modules
 /.idea
-/.scannerwork
 /coverage
 /dist
-.rpt2_cache
 .DS_Store
 .eslintcache
 npm-debug.log

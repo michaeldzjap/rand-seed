@@ -1,17 +1,21 @@
 language: node_js
 node_js:
   - "node"
+addons:
+  sonarcloud:
+    organization: michaeldzjap-github
 env:
   - HUSKY=0
-  - CODECOV_TOKEN="b754ec8a-0cb3-4958-8d7c-8cca5190f53c"
 cache:
   directories:
     - node_modules
 before_install:
-  - pip install --user codecov
+  - curl -Os https://uploader.codecov.io/latest/linux/codecov
+  - chmod +x codecov
 before_script:
   - npm run lint
 script:
   - npm test
+  - sonar-scanner
 after_success:
-  - codecov --file coverage/lcov.info --disable search
+  - ./codecov -f coverage/lcov.info
