@@ -6,9 +6,9 @@
     "lib": ["es5", "es6", "es7", "dom"],
     "removeComments": true,
     "strict": true,
-    "sourceMap": true,
     "declaration": true,
     "declarationDir": "./dist",
+    "rootDir": "./src",
     "outDir": "./dist"
   },
   "include": [
