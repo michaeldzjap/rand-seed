@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "cross-env NODE_ENV=test ./node_modules/.bin/jest",
-    "lint": "./node_modules/.bin/eslint --ext .ts ./",
+    "lint": "./node_modules/.bin/eslint --ext .ts .",
     "development": "cross-env NODE_ENV=local ./node_modules/.bin/rollup --config",
     "dev": "npm run development",
     "production": "cross-env NODE_ENV=production ./node_modules/.bin/rollup --config",
