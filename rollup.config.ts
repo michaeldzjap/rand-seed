@@ -13,7 +13,6 @@ export default {
         { dir: './', entryFileNames: pkg.main, format: 'cjs', sourcemap: local, exports: 'named' },
         { dir: './', entryFileNames: pkg.module, format: 'es', sourcemap: local },
     ],
-    external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
     watch: {
         include: 'src/**',
     },
