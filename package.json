@@ -35,7 +35,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-terser": "^0.3.0",
+    "@rollup/plugin-terser": "^0.4.0",
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/jest": "^29.0.1",
     "@typescript-eslint/eslint-plugin": "^5.1.0",
@@ -55,7 +55,7 @@
     "prettier": "^2.1.1",
     "rollup": "^3.2.0",
     "ts-jest": "^29.0.0",
-    "typescript": "^4.0.2"
+    "typescript": "^5.0.4"
   },
   "lint-staged": {
     "*.{ts,js}": "eslint --cache --fix"
