@@ -39,9 +39,9 @@ class Xoshiro128ss extends Base implements Algorithm {
      */
     public next(): number {
         const t = this.b << 9;
-        let r = this.a * 5;
+        let r = this.b * 5;
 
-        r = (r << 7) | ((r >>> 25) * 9);
+        r = ((r << 7) | (r >>> 25)) * 9;
 
         this.c ^= this.a;
         this.d ^= this.b;
