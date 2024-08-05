@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "es5",
-    "module": "es6",
-    "lib": ["es5", "es6", "es7", "dom"],
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "module": "ESNext",
     "removeComments": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "strict": true,
     "declaration": true,
     "declarationDir": "./dist",
@@ -12,7 +17,8 @@
     "outDir": "./dist"
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "rollup.config.ts"
   ],
   "exclude": [
     "node_modules",
