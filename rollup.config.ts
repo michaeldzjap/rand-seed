@@ -1,12 +1,15 @@
+import { readFile } from 'fs/promises';
+
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
+import { defineConfig } from 'rollup';
 
-const pkg = require('./package.json');
+const pkg = JSON.parse((await readFile(new URL('./package.json', import.meta.url))).toString());
 const local = process.env.NODE_ENV === 'local';
 
-export default {
+export default defineConfig({
     input: 'src/index.ts',
     output: [
         { dir: './', entryFileNames: pkg.main, format: 'cjs', sourcemap: local, exports: 'named' },
@@ -23,4 +26,4 @@ export default {
         nodeResolve(),
         terser(),
     ],
-};
+});

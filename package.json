@@ -11,11 +11,11 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test ./node_modules/.bin/jest",
     "lint": "npx eslint --ext .ts,.js ./",
-    "development": "cross-env NODE_ENV=local npx rollup --bundleConfigAsCjs --config rollup.config.ts --configPlugin typescript",
+    "development": "cross-env NODE_ENV=local npx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "dev": "npm run development",
-    "production": "cross-env NODE_ENV=production npx rollup --bundleConfigAsCjs --config rollup.config.ts --configPlugin typescript",
+    "production": "cross-env NODE_ENV=production npx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "prod": "npm run production",
-    "watch": "cross-env NODE_ENV=local npx rollup --bundleConfigAsCjs --config rollup.config.ts --configPlugin typescript --watch"
+    "watch": "cross-env NODE_ENV=local npx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --watch"
   },
   "repository": {
     "type": "git",
@@ -45,7 +45,6 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^27.0.4",
     "eslint-plugin-jest-dom": "^5.0.1",
     "eslint-plugin-prettier": "^5.1.3",
