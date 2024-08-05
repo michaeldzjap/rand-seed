@@ -1,4 +1,4 @@
-interface Algorithm {
+export default interface Algorithm {
     /**
      * Generate a new random number.
      *
@@ -6,5 +6,3 @@ interface Algorithm {
      */
     next(): number;
 }
-
-export default Algorithm;

@@ -1,4 +1,4 @@
-import AlgorithmContract from './Algorithm';
+import type AlgorithmContract from './Algorithm';
 import Mulberry32 from './Algorithms/Mulberry32';
 import Sfc32 from './Algorithms/Sfc32';
 import Xoshiro128ss from './Algorithms/Xoshiro128ss';
