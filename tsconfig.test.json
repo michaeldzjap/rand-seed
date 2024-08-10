@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.base",
-  "include": [
-    "__tests__/**/*"
-  ]
+  "compilerOptions": {
+    "verbatimModuleSyntax": false
+  },
+  "include": ["__tests__/**/*"]
 }

@@ -1,11 +1,11 @@
-const Rand = require('../dist/rand-seed').default;
-const PRNG = require('../dist/rand-seed');
+const Rand = require('../../dist/rand-seed').default;
+const PRNG = require('../../dist/rand-seed');
 
 let rand = new Rand('1234', PRNG.mulberry32);
-const result1 = Array.from({length: 10}, () => rand.next());
+const result1 = Array.from({ length: 10 }, () => rand.next());
 
 rand = new Rand('1234');
-const result2 = Array.from({length: 10}, () => rand.next());
+const result2 = Array.from({ length: 10 }, () => rand.next());
 
 console.log('RESULT1:', result1);
 console.log('RESULT2:', result2);

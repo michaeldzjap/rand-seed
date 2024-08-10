@@ -1,5 +1,5 @@
 import Base from './Base';
-import Algorithm from '../Algorithm';
+import type Algorithm from '../Algorithm';
 
 /**
  * @class
