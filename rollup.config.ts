@@ -2,6 +2,7 @@ import { readFile } from 'fs/promises';
 
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
+import clean from '@rollup-extras/plugin-clean';
 import { defineConfig } from 'rollup';
 
 const pkg = JSON.parse((await readFile(new URL('./package.json', import.meta.url))).toString());
@@ -27,5 +28,9 @@ export default defineConfig({
     watch: {
         include: 'src/**',
     },
-    plugins: [typescript({ sourceMap: local }), terser()],
+    plugins: [
+        clean('dist'),
+        typescript({ sourceMap: local }),
+        terser(),
+    ],
 });
