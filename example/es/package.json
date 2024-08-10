@@ -1,0 +1,22 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "A simple example of rand-seed",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaeldzjap/rand-seed.git"
+  },
+  "keywords": [
+    "random",
+    "seed",
+    "prng"
+  ],
+  "author": "Michael Dzjaparidze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaeldzjap/rand-seed/issues"
+  },
+  "homepage": "https://github.com/michaeldzjap/rand-seed#readme"
+}
