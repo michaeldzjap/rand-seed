@@ -1,21 +1,20 @@
 {
   "name": "rand-seed",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A small library for generating random numbers",
   "exports": {
     ".": {
-      "imports": {
+      "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/rand-seed.mjs"
+        "default": "./dist/index.js"
       },
       "require": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/rand-seed.js"
+        "default": "./dist/index.cjs"
       }
     }
   },
-  "main": "dist/rand-seed.js",
-  "module": "dist/rand-seed.mjs",
+  "type": "module",
   "files": [
     "dist"
   ],
