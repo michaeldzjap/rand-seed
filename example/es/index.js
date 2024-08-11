@@ -1,4 +1,4 @@
-import Rand, { PRNG } from '../../dist/rand-seed.mjs';
+import Rand, { PRNG } from '../../dist/index.js';
 
 let rand = new Rand('1234', PRNG.mulberry32);
 const result1 = Array.from({ length: 10 }, () => rand.next());

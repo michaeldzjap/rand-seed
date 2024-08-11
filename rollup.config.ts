@@ -1,26 +1,23 @@
-import { readFile } from 'fs/promises';
-
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import clean from '@rollup-extras/plugin-clean';
 import { defineConfig } from 'rollup';
 
-const pkg = JSON.parse((await readFile(new URL('./package.json', import.meta.url))).toString());
 const local = process.env.NODE_ENV === 'local';
 
 export default defineConfig({
     input: 'src/index.ts',
     output: [
         {
-            dir: './',
-            entryFileNames: pkg.main,
+            dir: './dist',
+            entryFileNames: 'index.cjs',
             format: 'cjs',
             sourcemap: local,
             exports: 'named',
         },
         {
-            dir: './',
-            entryFileNames: pkg.module,
+            dir: './dist',
+            entryFileNames: 'index.js',
             format: 'es',
             sourcemap: local,
         },
@@ -28,9 +25,5 @@ export default defineConfig({
     watch: {
         include: 'src/**',
     },
-    plugins: [
-        clean('dist'),
-        typescript({ sourceMap: local }),
-        terser(),
-    ],
+    plugins: [clean('dist'), typescript({ sourceMap: local }), terser()],
 });
