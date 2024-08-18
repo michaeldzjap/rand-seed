@@ -32,7 +32,7 @@ export default defineConfig({
         typescript({ sourceMap: local }),
         terser(),
         (() => ({
-            name: 'collectCjsTypeDeclaration',
+            name: 'patchCJjs',
             writeBundle: {
                 sequential: true,
                 order: 'post',
@@ -41,31 +41,15 @@ export default defineConfig({
                         return;
                     }
 
-                    fs.readdir('./dist/es', { recursive: true }, (err, list) => {
-                        for (const item of list) {
-                            if (item.toString().endsWith('.js')) {
-                                continue;
-                            }
+                    fs.writeFile('./dist/cjs/index.d.ts', 'export * from \'../es/index\';\nexport { default } from \'../es/index\';', (err) => {
+                        if (err) {
+                            console.error(err);
+                        }
+                    });
 
-                            if (fs.lstatSync(`./dist/es/${item.toString()}`).isDirectory()) {
-                                if (!fs.existsSync(`./dist/cjs/${item.toString()}`)) {
-                                    fs.mkdirSync(`./dist/cjs/${item.toString()}`, { recursive: true });
-                                }
-
-                                continue;
-                            }
-
-                            fs.copyFile(`./dist/es/${item}`, `./dist/cjs/${item}`, (err) => {
-                                if (err) {
-                                    console.error(err);
-                                }
-
-                                fs.writeFile('./dist/cjs/package.json', '{\n\t"type": "commonjs"\n}', (err) => {
-                                    if (err) {
-                                        console.error(err);
-                                    }
-                                });
-                            });
+                    fs.writeFile('./dist/cjs/package.json', '{\n\t"type": "commonjs"\n}', (err) => {
+                        if (err) {
+                            console.error(err);
                         }
                     });
                 },
