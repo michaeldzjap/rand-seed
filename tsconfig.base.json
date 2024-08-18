@@ -7,12 +7,11 @@
     "resolveJsonModule": true,
     "verbatimModuleSyntax": true,
     "useDefineForClassFields": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "strict": true,
     "declaration": true,
-    "declarationDir": "./dist",
+    "declarationDir": "./dist/es",
     "rootDir": "./src",
     "outDir": "./dist"
   },

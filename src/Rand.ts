@@ -28,7 +28,7 @@ class Rand {
      * The string that will be used for generating a suitable hash for any of
      * the provided PRNG algorithms.
      *
-     * @var {string}
+     * @var {string|undefined}
      */
     private str?: string;
 
@@ -49,8 +49,8 @@ class Rand {
     /**
      * Create a new rand instance.
      *
-     * @param {string} str
-     * @param {PRNG} prng
+     * @param {string|undefined} str
+     * @param {PRNG|undefined} prng
      */
     public constructor(str?: string, prng: PRNG = PRNG.sfc32) {
         this.str = str;
