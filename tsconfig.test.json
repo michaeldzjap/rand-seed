@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.base",
   "compilerOptions": {
+    "esModuleInterop": true,
     "verbatimModuleSyntax": false
   },
   "include": ["__tests__/**/*"]

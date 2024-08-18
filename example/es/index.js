@@ -1,9 +1,9 @@
-import Rand, { PRNG } from '../../dist/index.js';
+import Rand, { PRNG } from '../../dist/es/index.js';
 
 let rand = new Rand('1234', PRNG.mulberry32);
 const result1 = Array.from({ length: 10 }, () => rand.next());
 
-rand = new Rand('1234');
+rand = new Rand('1234', PRNG.mulberry32);
 const result2 = Array.from({ length: 10 }, () => rand.next());
 
 console.log('RESULT1:', result1);
