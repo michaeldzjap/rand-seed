@@ -1,4 +1,5 @@
-import fs from 'fs';
+import { copyFile, lstat, readdir, writeFile } from 'fs';
+import { dirname, parse } from 'path';
 
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
@@ -32,6 +33,38 @@ export default defineConfig({
         typescript({ sourceMap: local }),
         terser(),
         (() => ({
+            name: 'copyDeclarationFiles',
+            writeBundle: {
+                sequential: true,
+                order: 'post',
+                handler: ({ format }) => {
+                    if (format === 'cjs') return;
+
+                    readdir('./dist/types', { recursive: true }, (err, paths) => {
+                        if (err) return console.error(err);
+
+                        for (const path of paths) {
+                            lstat(`./dist/types/${path}`, (err, stats) => {
+                                if (err) return console.error(err);
+
+                                if (stats.isFile()) {
+                                    const dir = dirname(path.toString()).replace(/^\./, '');
+
+                                    copyFile(
+                                        `./dist/types/${path}`,
+                                        `./dist/types/${dir ? `${dir}/` : dir}${parse(path.toString()).name}.mts`,
+                                        (err) => {
+                                            if (err) return console.error(err);
+                                        },
+                                    );
+                                }
+                            });
+                        }
+                    });
+                },
+            }
+        }))(),
+        (() => ({
             name: 'createPackageFiles',
             writeBundle: {
                 sequential: true,
@@ -39,14 +72,14 @@ export default defineConfig({
                 handler: ({ format }) => {
                     switch (format) {
                         case 'cjs': {
-                            fs.writeFile('./dist/cjs/package.json', '{\n\t"type": "commonjs"\n}', (err) => {
+                            writeFile('./dist/cjs/package.json', '{\n\t"type": "commonjs"\n}', (err) => {
                                 if (err) console.error(err);
                             });
 
                             break;
                         }
                         case 'es': {
-                            fs.writeFile('./dist/es/package.json', '{\n\t"type": "module"\n}', (err) => {
+                            writeFile('./dist/es/package.json', '{\n\t"type": "module"\n}', (err) => {
                                 if (err) console.error(err);
                             });
 

@@ -6,12 +6,17 @@
   "module": "./dist/es/index.js",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/es/index.js",
-      "require": "./dist/cjs/index.js"
+      "import": {
+        "types": "./dist/types/index.d.mts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
     }
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
