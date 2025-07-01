@@ -72,9 +72,6 @@ export default [
                 format: 'es',
             },
         ],
-        plugins: [
-            dts(),
-            clean('dist/types'),
-        ],
+        plugins: [dts(), clean('dist/types')],
     }),
 ];
