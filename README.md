@@ -18,7 +18,7 @@ The default `Math.random()` function doesn't allow for setting a seed. This libr
 This package is available through _npm_:
 
 ```
-npm install --save rand-seed
+npm install rand-seed
 ```
 
 ## Usage
