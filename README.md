@@ -17,8 +17,8 @@ The default `Math.random()` function doesn't allow for setting a seed. This libr
 
 This package is available through _npm_:
 
-```
-npm install --save rand-seed
+```bash
+npm install rand-seed
 ```
 
 ## Usage
@@ -52,4 +52,6 @@ const rand = new Rand('1234', PRNG.xoshiro128ss);
 
 ## Example
 
-A simple example is included. This may be run with _node_: `node example/index.js`
+A simple example is included. The example is given in two different module systems (Common JS and ES Modules). To run the example,
+build the project with the `npm run prod` command. Then, you may run one of the examples with _node_: `node example/cjs/index.cjs`
+to run a Common JS example or `node example/es/index.js` to run a ES Modules example.
