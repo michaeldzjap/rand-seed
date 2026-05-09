@@ -2,11 +2,10 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "target": "ES6",
+    "target": "ESNext",
     "noEmit": true,
     "removeComments": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
     "verbatimModuleSyntax": true,
     "useDefineForClassFields": true,
     "forceConsistentCasingInFileNames": true,
