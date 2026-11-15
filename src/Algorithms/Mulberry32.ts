@@ -30,7 +30,7 @@ class Mulberry32 extends Base implements Algorithm {
      * @returns {number}
      */
     public next(): number {
-        let t = (this.a += 0x6d2b79f5);
+        let t = this.a = (this.a + 0x6d2b79f5 | 0);
         t = Math.imul(t ^ (t >>> 15), t | 1);
         t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
 
