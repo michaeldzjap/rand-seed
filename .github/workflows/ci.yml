@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        node-version: [23.x, 24.x, 25.x]
+        node-version: [24.x, 26.x]
 
     steps:
       - name: Check out repository code
@@ -44,11 +44,11 @@ jobs:
 
       - name: Upload coverage report
         uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
-        if: ${{ matrix.os == 'ubuntu-latest' && matrix.node-version == '25.x' }}
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.node-version == '26.x' }}
 
       - name: SonarQube scan
         uses: SonarSource/sonarqube-scan-action@e805d875275f728fac1885b413934be6d7c63f65 # v8.4.1
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
-        if: ${{ matrix.os == 'ubuntu-latest' && matrix.node-version == '25.x' }}
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.node-version == '26.x' }}
